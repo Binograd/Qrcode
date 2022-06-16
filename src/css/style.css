@@ -154,7 +154,7 @@ footer {
 .museum-button {
     width: 45px;
     height: 45px;
-    background-image: url('/assets/Button-icon.png');
+    background-image: url('../assets/Button-icon.png');
     background-repeat: no-repeat;
 }
 
