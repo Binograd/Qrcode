@@ -1,0 +1,284 @@
+/* Общие стили */
+:root {
+    --blue: #2B2678;
+    --dark-blue: #0E113F;
+    --purple: #541C53;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100vh;
+    background-color: #212121;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    height: fit-content;
+    max-width: 440px;
+    min-width: 320px;
+    color: white;
+    background-color: white;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* Стили для хедера */
+
+header {
+    background-color: var(--blue);
+    height: 56px;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+}
+
+.header-right .logo-desc {
+    font-weight: 500;
+    font-size: 10px;
+    max-width: 100px;
+}
+
+/* Стили для подвала */
+
+footer {
+    height: 52px;
+    background-color: var(--dark-blue);
+    padding: 10px 0 5px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social {
+    display: flex;
+}
+
+.social li {
+    margin-right: 12px;
+}
+
+.social img {
+    height: 20px;
+    width: 20px;
+}
+
+.copyright {
+    font-weight: 400;
+    font-size: 10px;
+}
+
+/* Стили для музеев */
+
+.museum {
+    max-width: 310px;
+    height: 230px;
+    background-color: var(--blue);
+    margin: 25px auto 50px auto;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 4px var(--purple);
+}
+
+.museum-top {
+    position: relative;
+    text-align: center;
+    max-height: 110px;
+}
+
+.museum-top a {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    font-size: 24px;
+    width: fit-content;
+}
+
+.museum-img {
+    max-height: 110px;
+    max-width: 310px;
+}
+
+.museum-bottom {
+    display: flex;
+    height: 120px;
+}
+
+.museum-bottom div.first {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.museum-bottom div.second {
+    display: flex;
+    width: 80px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    padding-bottom: 12px;
+}
+
+.museum-adress {
+    font-size: 10px;
+    margin: 10px 0 8px 18px;
+    font-weight: 400;
+}
+
+.museum-desc {
+    display: block;
+    max-width: 210px;
+    font-size: 11px;
+    margin: 10px 0 0 18px;
+    font-weight: 400;
+}
+
+.museum-button {
+    width: 45px;
+    height: 45px;
+    background-image: url('/assets/Button-icon.png');
+    background-repeat: no-repeat;
+}
+
+/* Стили для витрин */
+
+.stand {
+    width: 310px;
+    height: 170px;
+    background-color: var(--blue);
+    margin: 25px auto 50px auto;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 4px var(--purple);
+    display: flex;
+}
+
+.stand-img {
+    width: 170px;
+    height: 170px;
+}
+
+.stand-text {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 10px 0 10px;
+}
+
+.stand-title {
+    font-size: 14px;
+    width: max-content;
+    margin-bottom: 12px;
+}
+
+.stand-desc {
+    font-size: 11px;
+}
+
+/* Стили для экспонатов */
+
+.item {
+    width: 310px;
+    min-height: 290px;
+    background-color: var(--blue);
+    margin: 25px auto 50px auto;
+    border-radius: 8px;
+    box-shadow: 4px 4px 0 4px var(--purple);
+    display: flex;
+    flex-direction: column;
+}
+
+.item-img {
+    width: 310px;
+    height: 240px;
+}
+
+.item-bottom {
+    padding: 5px 5px 0 15px;
+    display: flex;
+}
+
+.item-text {
+    padding-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    max-width: 255px;
+}
+
+.item-title {
+    font-size: 14px;
+    width: max-content;
+    margin-bottom: 5px;
+}
+
+.item-desc {
+    font-size: 11px;
+    max-width: 255px;
+}
+
+.item-bottom div.second {
+    display: flex;
+    width: 50px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.item-button {
+    width: 25px;
+    height: 30px;
+    margin-bottom: 3px;
+    transform: rotate(90deg);
+    transition: all 1s ease-in-out;
+}
+
+.hiden {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    animation: decrease 3s 1;
+}
+
+.visible {
+    white-space: normal;
+    overflow: visible;
+    animation: increase 3s 1;
+}
+
+.active {
+    transform: rotate(270deg);
+}
+
+@keyframes increase {
+    from {
+        height: 15px;
+    }
+    to {
+        height: fit-content;
+    }
+    25% {
+        height: fit-content/4;
+    }
+    50% {
+        height: fit-content/2;
+    }
+    75% {
+        height: fit-content/2 * 3;
+    }
+}
