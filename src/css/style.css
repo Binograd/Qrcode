@@ -154,7 +154,7 @@ footer {
 .museum-button {
     width: 45px;
     height: 45px;
-    background-image: url('../assets/Button-icon.png');
+    background-image: url('/assets/Button-icon.png');
     background-repeat: no-repeat;
 }
 
@@ -230,7 +230,6 @@ footer {
 .item-desc {
     font-size: 11px;
     max-width: 255px;
-    min-height: 15px;
 }
 
 .item-bottom div.second {
@@ -246,7 +245,7 @@ footer {
     height: 30px;
     margin-bottom: 3px;
     transform: rotate(90deg);
-    transition: all 0.5s ease-in;
+    transition: all 1s ease-in-out;
 }
 
 .hiden {
@@ -258,26 +257,51 @@ footer {
 .visible {
     white-space: normal;
     overflow: visible;
+    animation: increase 3s 1;
 }
 
 .active {
     transform: rotate(270deg);
 }
-/* 
-@keyframes increase {
-    from {
-        height: 15px;
-    }
-    to {
-        height: fit-content;
-    }
-    25% {
-        height: fit-content/4;
-    }
-    50% {
-        height: fit-content/2;
-    }
-    75% {
-        height: fit-content/2 * 3;
-    }
-} */
+
+/* Стили бокового меню */
+
+.overlay{
+    width: 180px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: var(--dark-blue);
+}
+.overlay img{
+    width: 35px;
+    height: 35px;
+    margin: 5px 0 0 5px;
+}
+.overlay nav{
+    padding-left: 20px;
+}
+.overlay ul{
+    list-style-type: none;
+    font-size: 14px;
+}
+.overlay li{
+    margin-bottom: 5px;
+}
+.overlay li::before {
+    content: "";
+    background-color: white;
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    left: -6px;
+    top: -2.5px;
+}
+.off{
+    display: none;
+}

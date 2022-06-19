@@ -11,4 +11,14 @@ document.body.addEventListener('click', e => {
             e.target.classList.add('active')
         }
     }
+    if(e.target.classList.contains('menu')){
+        e.preventDefault();
+        let header = document.querySelector('header');
+        let overlay = header.querySelector('.overlay');
+        if (overlay.classList.contains('off')) {
+            overlay.classList.remove('off');
+        } else {
+            overlay.classList.add('off');
+        };
+    }
 })
