@@ -52,14 +52,14 @@ header {
 
 .header-right .logo-desc {
     font-weight: 500;
-    font-size: 10px;
-    max-width: 100px;
+    font-size: 12px;
+    max-width: 120px;
 }
 
 /* Стили для подвала */
 
 footer {
-    height: 52px;
+    height: 55px;
     background-color: var(--dark-blue);
     padding: 10px 0 5px 0;
     display: flex;
@@ -76,20 +76,21 @@ footer {
 }
 
 .social img {
-    height: 20px;
-    width: 20px;
+    height: 25px;
+    width: 25px;
 }
 
 .copyright {
     font-weight: 400;
-    font-size: 10px;
+    font-size: 11px;
+    margin-bottom: 3px;
 }
 
 /* Стили для музеев */
 
 .museum {
     max-width: 310px;
-    height: 230px;
+    height: 240px;
     background-color: var(--blue);
     margin: 25px auto 50px auto;
     border-radius: 8px;
@@ -138,7 +139,7 @@ footer {
 }
 
 .museum-adress {
-    font-size: 10px;
+    font-size: 11px;
     margin: 10px 0 8px 18px;
     font-weight: 400;
 }
@@ -146,14 +147,14 @@ footer {
 .museum-desc {
     display: block;
     max-width: 210px;
-    font-size: 11px;
+    font-size: 12px;
     margin: 10px 0 0 18px;
     font-weight: 400;
 }
 
 .museum-button {
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 50px;
     background-image: url('/assets/Button-icon.png');
     background-repeat: no-repeat;
 }
@@ -188,7 +189,7 @@ footer {
 }
 
 .stand-desc {
-    font-size: 11px;
+    font-size: 12px;
 }
 
 /* Стили для экспонатов */
@@ -228,7 +229,7 @@ footer {
 }
 
 .item-desc {
-    font-size: 11px;
+    font-size: 12px;
     max-width: 255px;
 }
 
@@ -242,8 +243,8 @@ footer {
 
 .item-button {
     width: 25px;
-    height: 30px;
-    margin-bottom: 3px;
+    height: 25px;
+    margin-bottom: 8px;
     transform: rotate(90deg);
     transition: all 1s ease-in-out;
 }
@@ -274,6 +275,7 @@ footer {
     left: 0;
     z-index: 10;
     background-color: var(--dark-blue);
+    box-shadow: 2px 0 6px 2px var(--dark-blue)
 }
 .overlay img{
     width: 35px;
